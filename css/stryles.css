@@ -37,6 +37,10 @@ html {
         margin-right: auto;
     }
 
+    img {
+        display: block;
+    }
+
     .portfolio {
         background-color: #E5E5E5;
     }
@@ -44,8 +48,9 @@ html {
     /* Header */
 
 
-    header {
+    .header {
         background-color: #E7E9FC;
+        border-bottom: 1px solid #e7e9fc;
     }
 
     .header-container {
@@ -59,7 +64,13 @@ html {
         padding: 0;
     }
 
+    .page-nav {
+        display: flex;
+        align-items: center;
+    }
+
     .logo {
+        padding: 24px 0;
         color: #4d5ae5;
         font-family: Raleway, sans-serif; 
         font-weight: 800;
@@ -69,6 +80,7 @@ html {
         text-decoration: none;
         text-transform: uppercase;
         text-decoration: none;
+        margin-right: 76px;
     }
 
     .logo:hover,
@@ -89,11 +101,14 @@ html {
     color: #f4f4fd;
     }
 
+    .menu {
+    display: flex;
+    gap: 40px;
+    }
+
 
     .list {
-    display: flex;
-    margin-left: 36px;
-
+    padding: 24px 0;
     color: var(--title-color);
     font-size: 16px; 
     line-height: 1.5;
@@ -119,16 +134,14 @@ html {
     color: #404bbf;
     }
 
-    .contacts {
-        display: flex;
-        margin-left: auto;
-    }
-
     .list .contacts .item + .item {
         margin-left: 40px;
     }
 
     .contacts {
+    display: flex;
+    margin-left: auto;
+    gap: 40px;
     color: var(--primary-color);
     font-size: 16px; 
     line-height: 1.5;
