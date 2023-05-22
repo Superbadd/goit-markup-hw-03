@@ -42,7 +42,9 @@ html {
     }
 
     .portfolio {
-        background-color: #E5E5E5;
+    background-color: #E5E5E5;
+    padding-top: 96px;
+    padding-bottom: 120px;
     }
 
     /* Header */
@@ -119,19 +121,23 @@ html {
     text-decoration: none;
     }
 
-    .list .item:not(:last-child) {
-        margin-right: 40px;
+    .list > .item {
+    display: flex;
+    gap: 40px;
     }
 
-    .list .link {
-        display: block;
-        padding-top: 24px;
-        padding-bottom: 24px;
+    .list .item:not(:last-child) {
+        margin-right: 40px;
     }
 
     .list:hover,
     .list:focus {
     color: #404bbf;
+    }
+
+    .item > .link {
+    display: flex;
+    padding: 24px 0;
     }
 
     .list .contacts .item + .item {
@@ -156,31 +162,52 @@ html {
     }
 
     .section {
+    padding: 120px 0;
     margin-bottom: 120px;
     }
 
     /* Second section */
 
+    .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    }
+
     .desc {
+    gap: 24px;
     margin: 0;
     }
 
     .desc-items {
-        padding-right: 24px;
+    width: calc((100% - 72px) / 4);
     }
 
     /* Third section */
 
+    .ssection-container {
+        padding-bottom: 120px;
+    }
+
     .doing {
+        gap: 24px;
         margin: 0;
     }
 
     .doing-img {
         padding-right: 24px;
     }
-    
-    .fourth-section {
-    padding: 120px 156px;
+
+    .doing .doing-img:first-child {
+        width: calc((100% - 48px) / 3);
     }
 
     .fsection-container {
@@ -189,12 +216,14 @@ html {
     }
 
     .first-section {
-        background-color: #2e2f42;
+    background-color: #2e2f42;
+    padding: 188px 0;
     }
 
     .headline { 
     margin-top: 0;
     margin-bottom: 48px;
+    max-width: 496px;
     color: #ffffff; 
     font-size: 56px; 
     line-height: 1.07;
@@ -203,6 +232,7 @@ html {
     }
 
     .section-title {
+    margin-bottom: 72px;
     color: var(--title-color);
     font-weight: 700; 
     font-size: 36px; 
@@ -214,7 +244,12 @@ html {
     padding-bottom: 72px;
     }
 
-    /* Team section */
+    /* Team (fourth) section */
+
+    .fourth-section {
+    padding: 120px 0;
+    padding: 120px 156px;
+    }
     
     .team-member {
     background-color: #ffffff;
@@ -225,15 +260,24 @@ html {
     padding-right: 0;
     }
 
+    .team-member:first-child {
+    width: calc((100% - 72px) / 4);
+    border-radius: 0px 0px 4px 4px;
+    }
+
     .team {
+    gap: 24px;
     margin: 0;
     background-color: #F4F4FD;    
     }
 
     .button {
-    border-radius: 4px;
-    width: 169px;
+    display: block;
+    min-width: 169px;
     height: 56px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
     font-family: "Roboto", sans-serif;
     background-color: var(--secondary-color);
     color: #ffffff;
@@ -246,7 +290,6 @@ html {
     .button:hover,
     .button:focus {
     background-color: #404BBF;
-    cursor: pointer;
     }
 
     .portfolio {
@@ -257,11 +300,15 @@ html {
 
     .btn-container {
     display: flex;
-    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    /* align-items: center; */
     flex-direction: column;
-    margin-top: 96px;
+    /* margin-top: 96px; */
     margin-bottom: 72px;
     }
+
+    /* Эти пидарасы должны нас сёдня кошмарить ёбаный как */
 
     .btn-container>.btn {
         margin: 0;
@@ -274,7 +321,7 @@ html {
     align-items: center;
     padding: 12px 24px;
     border-radius: 4px;
-    border: 1px solid #E7E9FC;
+    border: 1px solid #e7e9fc;
 
     font-family: "Roboto", sans-serif;
     background-color: #F4F4FD;
@@ -290,6 +337,7 @@ html {
     color: #ffffff;
     background-color: #404bbf;
     cursor: pointer;
+    border: 1px solid transparent;
     }
 
    .subtitle {
@@ -311,10 +359,18 @@ html {
    }
 
    .card-content {
+    padding: 32px 16px;
     display: flex;
     flex-direction: column;
     margin: 36px 16px;
-    align-items: center;
+   }
+
+   h3 {
+    text-align: center;
+   }
+
+   p {
+    text-align: center;
    }
 
    :nth-child(3n) {
@@ -402,6 +458,11 @@ html {
     background-color: #2e2f42;
     padding-top: 100px;
     padding-bottom: 100px;
+   }
+
+   .footer > .logo {
+    display: inline-block;
+    margin-bottom: 16px;
    }
 
    .footer-text {
