@@ -161,9 +161,15 @@ html {
     color: #404bbf;
     }
 
+    /* First section */
+
+    .portfolio {
+    padding-top: 96px;
+    padding-bottom: 120px;
+    }
+
     .section {
-    padding: 120px 0;
-    margin-bottom: 120px;
+    padding-top: 120px;
     }
 
     /* Second section */
@@ -250,6 +256,14 @@ html {
     .fourth-section {
     padding: 120px 0;
     /* padding: 120px 156px; */
+    }
+
+    .team-subtitle {
+    text-align: center;
+    }
+
+    .team-text {
+    text-align: center;
     }
     
     .team-member {
