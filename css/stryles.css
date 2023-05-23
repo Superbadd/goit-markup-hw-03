@@ -43,8 +43,6 @@ html {
 
     .portfolio {
     background-color: #E5E5E5;
-    padding-top: 96px;
-    padding-bottom: 120px;
     }
 
     /* Header */
@@ -72,6 +70,8 @@ html {
     }
 
     .logo {
+        display: inline-block;
+        margin-bottom: 16px;
         padding: 24px 0;
         color: #4d5ae5;
         font-family: Raleway, sans-serif; 
@@ -121,7 +121,7 @@ html {
     text-decoration: none;
     }
 
-    .list > .item {
+    .menu {
     display: flex;
     gap: 40px;
     }
@@ -183,6 +183,7 @@ html {
     }
 
     .desc {
+    display: flex;
     gap: 24px;
     margin: 0;
     }
@@ -198,8 +199,9 @@ html {
     }
 
     .doing {
-        gap: 24px;
-        margin: 0;
+    display: flex;
+    gap: 24px;
+    margin: 0;
     }
 
     .doing-img {
@@ -240,7 +242,6 @@ html {
     text-align: Center;
     text-transform: capitalize;
     letter-spacing: 0.02em;
-    margin: 0;
     padding-bottom: 72px;
     }
 
@@ -248,7 +249,7 @@ html {
 
     .fourth-section {
     padding: 120px 0;
-    padding: 120px 156px;
+    /* padding: 120px 156px; */
     }
     
     .team-member {
@@ -266,6 +267,7 @@ html {
     }
 
     .team {
+    display: flex;
     gap: 24px;
     margin: 0;
     background-color: #F4F4FD;    
@@ -292,33 +294,18 @@ html {
     background-color: #404BBF;
     }
 
-    .portfolio {
-        margin-bottom: 120px;
-    }
 
     /* Portfolio btn */
 
-    .btn-container {
+    .btns {
     display: flex;
     justify-content: center;
     gap: 24px;
-    /* align-items: center; */
-    flex-direction: column;
-    /* margin-top: 96px; */
     margin-bottom: 72px;
+    background-color: #E5E5E5;
     }
-
-    /* Эти пидарасы должны нас сёдня кошмарить ёбаный как */
-
-    .btn-container>.btn {
-        margin: 0;
-        padding: 0;
-        background-color: #E5E5E5;
-    }
-
 
     .btn {
-    align-items: center;
     padding: 12px 24px;
     border-radius: 4px;
     border: 1px solid #e7e9fc;
@@ -347,7 +334,7 @@ html {
     font-weight: 500; 
     font-size: 20px; 
     line-height: 1.2;
-    text-align: Left;
+    text-align: left;
     letter-spacing: 0.02em;
    }
 
@@ -361,16 +348,8 @@ html {
    .card-content {
     padding: 32px 16px;
     display: flex;
+    align-items: center;
     flex-direction: column;
-    margin: 36px 16px;
-   }
-
-   h3 {
-    text-align: center;
-   }
-
-   p {
-    text-align: center;
    }
 
    :nth-child(3n) {
@@ -386,27 +365,12 @@ html {
     text-align: left;
    }
 
-   .list work {
+   .works {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 48px;
     list-style: none;
-   }
-
-   .work {
-    text-decoration: none;
-   }
-
-   .work-title {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-    color: #2e2f42;
-   }
-
-   .work-desc {
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #434455;
    }
 
    .btn {
@@ -415,26 +379,9 @@ html {
 
    /* Cards */
 
-   .cards-container .work {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-    }
-
-    .cards-container {
-    margin-right: auto;
-    }
-
    .cards-element {
-    width: 360px;
-    margin-right: 24px;
-    margin-bottom: 48px;
+    width: calc((100% - 48px) / 3);
     margin-left: 0;
-    padding: 0;
-   }
-
-   a.link.work {
-    display: block;
     padding: 0;
    }
 
@@ -447,13 +394,16 @@ html {
    }
 
    .card-inside {
-    display: flex;
-    flex-direction: column;
-    margin-top: 32px;
-    margin-bottom: 32px;
-    margin-left: 16px;
-    margin-right: 54px;
+    padding: 32px 16px;
+    border: 1px solid #e7e9fc;
+    border-top: none;
+    margin-bottom: 8px;
    }
+
+    .work {
+        text-decoration: none;
+    }
+
    .footer {
     background-color: #2e2f42;
     padding-top: 100px;
@@ -462,11 +412,9 @@ html {
 
    .footer > .logo {
     display: inline-block;
-    margin-bottom: 16px;
    }
 
    .footer-text {
-    margin-top: 16px;
     margin-bottom: 0;
     max-width: 264px;
     color: #f4f4fd;
