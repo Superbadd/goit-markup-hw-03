@@ -168,11 +168,11 @@ html {
     padding-bottom: 120px;
     }
 
-    .section {
-    padding-top: 120px;
-    }
-
     /* Second section */
+
+    .second-section {
+    padding-top: 120px 0;
+    }
 
     .visually-hidden {
     position: absolute;
@@ -199,6 +199,10 @@ html {
     }
 
     /* Third section */
+
+    .third-section {
+    padding-bottom: 120px;
+    }
 
     .ssection-container {
         padding-bottom: 120px;
@@ -240,7 +244,7 @@ html {
     }
 
     .section-title {
-    margin-bottom: 72px;
+    margin-bottom: 8px;
     color: var(--title-color);
     font-weight: 700; 
     font-size: 36px; 
@@ -385,6 +389,15 @@ html {
     column-gap: 24px;
     row-gap: 48px;
     list-style: none;
+   }
+
+   .work-title {
+   font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    margin-bottom: 8px;
    }
 
    .btn {
